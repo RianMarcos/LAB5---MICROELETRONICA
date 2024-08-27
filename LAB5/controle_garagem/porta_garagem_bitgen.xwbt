@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Rian\Documents\MICROELETRONICA\LAB5_N\controle_garagem\porta_garagem.ncd
+OUTFILE=C:\Users\Rian\Documents\MICROELETRONICA\LAB5_N\controle_garagem\porta_garagem.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=C:\Users\Rian\Documents\MICROELETRONICA\LAB5_N\controle_garagem
+LICENSE=WebPack
+USER_INFO=212994145_0_0_233

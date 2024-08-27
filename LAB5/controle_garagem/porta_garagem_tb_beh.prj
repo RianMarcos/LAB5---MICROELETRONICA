@@ -1,0 +1,4 @@
+vhdl work "temporizador.vhd"
+vhdl work "debounce.vhd"
+vhdl work "porta_garagem.vhd"
+vhdl work "porta_garagem_tb.vhd"

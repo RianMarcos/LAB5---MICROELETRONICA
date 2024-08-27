@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.xst" -ofn "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s500e-fg320-5 "porta_garagem.ngc" porta_garagem.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o porta_garagem_map.ncd porta_garagem.ngd porta_garagem.pcf 
+par -w -intstyle ise -ol high -t 1 porta_garagem_map.ncd porta_garagem.ncd porta_garagem.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml porta_garagem.twx porta_garagem.ncd -o porta_garagem.twr porta_garagem.pcf -ucf pins.ucf 

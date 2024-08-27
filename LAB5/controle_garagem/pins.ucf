@@ -1,0 +1,15 @@
+
+NET "clk" LOC = "B8";
+NET "remoto" LOC = "	B18";
+NET "aberta" LOC = "G18";
+NET "fechada" LOC = "H18";
+NET "rst" LOC = "R17";
+NET "ligar" LOC = "J15";
+NET "direcao" LOC = "J14";
+NET "led(0)" LOC = "K15";
+NET "led(1)" LOC = "K14";
+NET "led(2)" LOC = "E17";
+NET "led(3)" LOC = "P15";
+NET "led(4)" LOC = "F4";
+NET "led(5)" LOC = "R4";
+

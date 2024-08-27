@@ -1,0 +1,22 @@
+V3 11
+FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/debounce.vhd" 2024/05/17.17:39:13 P.20131013
+EN work/debounce 1716253675 \
+      FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/debounce.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/debounce/Behavioral 1716253676 \
+      FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/debounce.vhd" \
+      EN work/debounce 1716253675
+FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" 2024/05/20.19:53:14 P.20131013
+EN work/porta_garagem 1716253679 \
+      FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/porta_garagem/Behavioral 1716253680 \
+      FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" \
+      EN work/porta_garagem 1716253679 CP debounce CP temporizador
+FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/temporizador.vhd" 2024/05/20.19:53:14 P.20131013
+EN work/temporizador 1716253677 \
+      FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/temporizador.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/temporizador/Behavioral 1716253678 \
+      FL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/temporizador.vhd" \
+      EN work/temporizador 1716253677

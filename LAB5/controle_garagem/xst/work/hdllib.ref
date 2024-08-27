@@ -1,0 +1,6 @@
+EN porta_garagem NULL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" sub00/vhpl04 1716253679
+EN temporizador NULL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/temporizador.vhd" sub00/vhpl02 1716253677
+EN debounce NULL "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/debounce.vhd" sub00/vhpl00 1716253675
+AR debounce behavioral "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/debounce.vhd" sub00/vhpl01 1716253676
+AR porta_garagem behavioral "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" sub00/vhpl05 1716253680
+AR temporizador behavioral "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/temporizador.vhd" sub00/vhpl03 1716253678

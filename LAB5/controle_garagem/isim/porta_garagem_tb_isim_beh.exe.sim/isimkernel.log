@@ -1,0 +1,29 @@
+Command line:
+   porta_garagem_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61452
+
+Mon May 20 23:15:16 2024
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5151.07 Meg
+
+ Total Signals          : 34
+ Total Nets             : 23
+ Total Signal Drivers   : 17
+ Total Blocks           : 5
+ Total Primitive Blocks : 3
+ Total Processes        : 8
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 390
+Total Line Count : 140
+
+ Total Simulation Time: 0.03125 sec
+
+ Current Memory Usage: 5151.07 Meg
+
+Mon May 20 23:15:25 2024
+

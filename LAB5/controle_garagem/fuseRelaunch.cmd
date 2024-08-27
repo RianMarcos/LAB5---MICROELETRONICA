@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem_tb_isim_beh.exe" -prj "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem_tb_beh.prj" "work.porta_garagem_tb" 

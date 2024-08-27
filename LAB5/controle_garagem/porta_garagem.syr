@@ -1,0 +1,541 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: porta_garagem.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "porta_garagem.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "porta_garagem"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : porta_garagem
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/debounce.vhd" in Library work.
+Entity <debounce> compiled.
+Entity <debounce> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/temporizador.vhd" in Library work.
+Entity <temporizador> compiled.
+Entity <temporizador> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" in Library work.
+Entity <porta_garagem> compiled.
+Entity <porta_garagem> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <porta_garagem> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <Behavioral>) with generics.
+	freqclk = 1
+	twindow = 1
+
+Analyzing hierarchy for entity <temporizador> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <porta_garagem> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:751 - "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" line 56: Bad association for formal port 'Dseg' of component 'temporizador'.
+WARNING:Xst:751 - "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd" line 56: Bad association for formal port 'Useg' of component 'temporizador'.
+Entity <porta_garagem> analyzed. Unit <porta_garagem> generated.
+
+Analyzing generic Entity <debounce> in library <work> (Architecture <Behavioral>).
+	freqclk = 1
+	twindow = 1
+Entity <debounce> analyzed. Unit <debounce> generated.
+
+Analyzing Entity <temporizador> in library <work> (Architecture <Behavioral>).
+Entity <temporizador> analyzed. Unit <temporizador> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/debounce.vhd".
+WARNING:Xst:1780 - Signal <flag> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found T flip-flop for signal <count<0>>.
+    Found 1-bit adder for signal <count_0$add0000> created at line 28.
+    Found 1-bit xor2 for signal <count_0$xor0000> created at line 26.
+    Found 1-bit register for signal <temp>.
+    Summary:
+	inferred   1 T-type flip-flop(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <temporizador>.
+    Related source file is "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/temporizador.vhd".
+    Found 26-bit up counter for signal <count_clk>.
+    Found 3-bit up counter for signal <Dseg_var>.
+    Found 3-bit adder for signal <Dseg_var$addsub0000> created at line 41.
+    Found 4-bit up counter for signal <Useg_var>.
+    Found 4-bit adder for signal <Useg_var$add0000> created at line 37.
+    Found 26-bit comparator less for signal <Useg_var$cmp_lt0000> created at line 33.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <temporizador> synthesized.
+
+
+Synthesizing Unit <porta_garagem>.
+    Related source file is "C:/Users/Rian/Documents/MICROELETRONICA/LAB5_N - Copia/controle_garagem/porta_garagem.vhd".
+WARNING:Xst:646 - Signal <Useg_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 42                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_fechado                                     |
+    | Power Up State     | st_fechado                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <flag>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+Unit <porta_garagem> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 1-bit adder                                           : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 3
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 2
+ 1-bit register                                        : 2
+# Toggle Registers                                     : 1
+ T flip-flop                                           : 1
+# Comparators                                          : 1
+ 26-bit comparator less                                : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <present_state/FSM> on signal <present_state[1:3]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ st_fechado      | 000
+ st_aberto       | 010
+ abrindo         | 001
+ fechando        | 110
+ parado_abrindo  | 011
+ parado_fechando | 111
+-----------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 3
+ 1-bit adder                                           : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 3
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Comparators                                          : 1
+ 26-bit comparator less                                : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <porta_garagem> ...
+
+Optimizing unit <temporizador> ...
+WARNING:Xst:1293 - FF/Latch <Dseg_var_2> has a constant value of 0 in block <temporizador>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Dseg_var_2> has a constant value of 0 in block <temporizador>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block porta_garagem, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 38
+ Flip-Flops                                            : 38
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : porta_garagem.ngr
+Top Level Output File Name         : porta_garagem
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 141
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 4
+#      LUT2                        : 6
+#      LUT3                        : 42
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 11
+#      LUT4_D                      : 1
+#      LUT4_L                      : 4
+#      MUXCY                       : 35
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 38
+#      FDC                         : 3
+#      FDC_1                       : 1
+#      FDCE                        : 32
+#      FDE                         : 1
+#      FDR                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 4
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       38  out of   4656     0%  
+ Number of Slice Flip Flops:             38  out of   9312     0%  
+ Number of 4 input LUTs:                 78  out of   9312     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+bt/temp                            | NONE(flag)             | 1     |
+clk                                | BUFGP                  | 37    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------+------------------------+-------+
+Control Signal                       | Buffer(FF name)        | Load  |
+-------------------------------------+------------------------+-------+
+flag_timer(present_state_FSM_Out71:O)| NONE(tempo/Dseg_var_0) | 32    |
+rst                                  | IBUF                   | 4     |
+-------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.195ns (Maximum Frequency: 138.995MHz)
+   Minimum input arrival time before clock: 5.119ns
+   Maximum output required time after clock: 5.691ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'bt/temp'
+  Clock period: 2.320ns (frequency: 431.099MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.320ns (Levels of Logic = 1)
+  Source:            flag (FF)
+  Destination:       flag (FF)
+  Source Clock:      bt/temp falling
+  Destination Clock: bt/temp falling
+
+  Data Path: flag to flag
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            6   0.514   0.569  flag (flag)
+     INV:I->O              1   0.612   0.357  flag_not00011_INV_0 (flag_not0001)
+     FDC_1:D                   0.268          flag
+    ----------------------------------------
+    Total                      2.320ns (1.394ns logic, 0.926ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.195ns (frequency: 138.995MHz)
+  Total number of paths / destination ports: 7781 / 70
+-------------------------------------------------------------------------
+Delay:               7.195ns (Levels of Logic = 38)
+  Source:            tempo/count_clk_7 (FF)
+  Destination:       tempo/count_clk_25 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: tempo/count_clk_7 to tempo/count_clk_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.532  tempo/count_clk_7 (tempo/count_clk_7)
+     LUT1:I0->O            1   0.612   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<0>_rt (tempo/Mcompar_Useg_var_cmp_lt0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<0> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<1> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<2> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<3> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<4> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<5> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<6> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<7> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcompar_Useg_var_cmp_lt0000_cy<8> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<8>)
+     MUXCY:CI->O          29   0.399   1.102  tempo/Mcompar_Useg_var_cmp_lt0000_cy<9> (tempo/Mcompar_Useg_var_cmp_lt0000_cy<9>)
+     LUT3:I2->O            1   0.612   0.000  tempo/Mcount_count_clk_lut<0> (tempo/Mcount_count_clk_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  tempo/Mcount_count_clk_cy<0> (tempo/Mcount_count_clk_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  tempo/Mcount_count_clk_cy<1> (tempo/Mcount_count_clk_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  tempo/Mcount_count_clk_cy<2> (tempo/Mcount_count_clk_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  tempo/Mcount_count_clk_cy<3> (tempo/Mcount_count_clk_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  tempo/Mcount_count_clk_cy<4> (tempo/Mcount_count_clk_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<5> (tempo/Mcount_count_clk_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<6> (tempo/Mcount_count_clk_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<7> (tempo/Mcount_count_clk_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<8> (tempo/Mcount_count_clk_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<9> (tempo/Mcount_count_clk_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<10> (tempo/Mcount_count_clk_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<11> (tempo/Mcount_count_clk_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<12> (tempo/Mcount_count_clk_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<13> (tempo/Mcount_count_clk_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<14> (tempo/Mcount_count_clk_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<15> (tempo/Mcount_count_clk_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<16> (tempo/Mcount_count_clk_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<17> (tempo/Mcount_count_clk_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<18> (tempo/Mcount_count_clk_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<19> (tempo/Mcount_count_clk_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<20> (tempo/Mcount_count_clk_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<21> (tempo/Mcount_count_clk_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<22> (tempo/Mcount_count_clk_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  tempo/Mcount_count_clk_cy<23> (tempo/Mcount_count_clk_cy<23>)
+     MUXCY:CI->O           0   0.051   0.000  tempo/Mcount_count_clk_cy<24> (tempo/Mcount_count_clk_cy<24>)
+     XORCY:CI->O           1   0.699   0.000  tempo/Mcount_count_clk_xor<25> (tempo/Mcount_count_clk25)
+     FDCE:D                    0.268          tempo/count_clk_25
+    ----------------------------------------
+    Total                      7.195ns (5.560ns logic, 1.634ns route)
+                                       (77.3% logic, 22.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 19 / 6
+-------------------------------------------------------------------------
+Offset:              5.119ns (Levels of Logic = 5)
+  Source:            aberta (PAD)
+  Destination:       present_state_FSM_FFd3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: aberta to present_state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.106   0.572  aberta_IBUF (aberta_IBUF)
+     LUT4_L:I3->LO         1   0.612   0.130  present_state_FSM_FFd3-In21 (present_state_FSM_FFd3-In21)
+     LUT3:I2->O            1   0.612   0.426  present_state_FSM_FFd3-In42_SW0 (N13)
+     LUT4_L:I1->LO         1   0.612   0.169  present_state_FSM_FFd3-In42 (present_state_FSM_FFd3-In42)
+     LUT3:I1->O            1   0.612   0.000  present_state_FSM_FFd3-In105 (present_state_FSM_FFd3-In)
+     FDC:D                     0.268          present_state_FSM_FFd3
+    ----------------------------------------
+    Total                      5.119ns (3.822ns logic, 1.297ns route)
+                                       (74.7% logic, 25.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 20 / 8
+-------------------------------------------------------------------------
+Offset:              5.691ns (Levels of Logic = 2)
+  Source:            present_state_FSM_FFd1 (FF)
+  Destination:       led<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: present_state_FSM_FFd1 to led<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.514   1.016  present_state_FSM_FFd1 (present_state_FSM_FFd1)
+     LUT2:I0->O            2   0.612   0.380  present_state_FSM_Out811 (led_3_OBUF)
+     OBUF:I->O                 3.169          led_3_OBUF (led<3>)
+    ----------------------------------------
+    Total                      5.691ns (4.295ns logic, 1.396ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.27 secs
+ 
+--> 
+
+Total memory usage is 4514612 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
